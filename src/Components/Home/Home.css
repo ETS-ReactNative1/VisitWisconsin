@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Wendy+One');
+
+.homeHeader {
+    height: 8vh;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-family: 'Wendy One';
+    font-size: 8vh;
+}
+
+.slider {
+    margin: 0vh 0vh 0vh 0vh;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+
