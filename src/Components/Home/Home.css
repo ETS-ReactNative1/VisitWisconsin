@@ -5,6 +5,8 @@
     background-color: #222222;
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
 }
 
 .navbar-brand {
@@ -38,3 +40,215 @@
     -webkit-text-stroke: 1.5px;
     -webkit-text-stroke-color: black;
 }
+
+.discoverButton {
+    border-radius: 25px;
+    height: 5vh;
+    width: 23vh;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    margin: auto;
+    margin-top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;  
+}
+
+.slide {
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+.discoverButton a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.mainContentContainer {
+    height: 100vh;
+
+    
+}
+
+.eventsAroundTheState {
+    display: flex;
+    justify-content: center;
+    margin-top: 16vh;
+    font-family: 'Wendy One';
+    font-size: 18vh;
+}
+
+.eventsAroundTheState a {
+    text-decoration: none;
+    color: black;
+}
+
+.eventOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.eventOneImageContainer {
+    width: 50%;
+    height: 50vh;
+    background-color: black;
+    border-radius: 15px;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventOneImage {
+    height: 45vh;
+    width: 96vh;
+    border-radius: 2vh;
+}
+
+.eventOneTitle {
+    border-top-color:blue;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color:blue;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color:blue;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    text-align: center;
+}
+
+.eventOneDescription {
+    width: 45%;
+    height: 30vh;
+    margin-left: 1vh;
+    border-top-width: 2px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    display: flex;
+    align-items: center;
+}
+
+.eventTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.eventTwoImageContainer {
+    width: 50%;
+    height: 50vh;
+    background-color: black;
+    border-radius: 15px;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventTwoImage {
+    height: 45vh;
+    width: 96vh;
+    border-radius: 2vh;
+}
+
+.eventTwoTitle {
+    border-top-color:blue;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color:blue;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color:blue;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    text-align: center;
+}
+
+.eventTwoDescription {
+    width: 45%;
+    height: 30vh;
+    margin-left: 1vh;
+    border-top-width: 2px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    display: flex;
+    align-items: center;
+}
+
+.eventThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.eventThreeImageContainer {
+    width: 50%;
+    height: 50vh;
+    background-color: black;
+    border-radius: 15px;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventThreeImage {
+    height: 45vh;
+    width: 96vh;
+    border-radius: 2vh;
+}
+
+.eventThreeTitle {
+    border-top-color:blue;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color:blue;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color:blue;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    text-align: center;
+}
+
+.eventThreeDescription {
+    width: 45%;
+    height: 30vh;
+    margin-left: 1vh;
+    border-top-width: 2px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    margin-top: 5vh;
+    height: 22vh;
+    width: 100%;
+    background-color: #222222;
+}
+    
+

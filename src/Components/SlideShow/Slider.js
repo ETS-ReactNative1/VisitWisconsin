@@ -3,6 +3,7 @@ import SlideOne from './SlideOne';
 import SlideTwo from './SlideTwo';
 import SlideThree from './SlideThree';
 import SlideFour from './SlideFour';
+import SlideFive from './SlideFive';
 
 
 export default class Slider extends Component {
@@ -31,7 +32,7 @@ export default class Slider extends Component {
   // }
 
   moveSlide() {
-    if(this.state.slideCount + 1 > 4) {
+    if(this.state.slideCount + 1 > 5) {
       this.setState({
         slideCount: 1
       }) 
@@ -60,6 +61,7 @@ export default class Slider extends Component {
         { this.state.slideCount === 2 ? <SlideTwo/> : null }
         { this.state.slideCount === 3 ? <SlideThree/> : null }
         { this.state.slideCount === 4 ? <SlideFour/> : null }
+        { this.state.slideCount === 5 ? <SlideFive/> : null }
       </div>
     );
   }
