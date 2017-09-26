@@ -41,7 +41,15 @@ export default class Home extends Component {
                 <div className='mainContent'>
                     <div className='slideShowContainer'>
                         <Slider/>
+                    <div className='homeText'>
+                        Your Greatest Adventure
                     </div>
+                    <div className='homeText2'>
+                        Awaits You...
+                    </div>
+                    </div>
+
+
                 </div>
             </div>
 

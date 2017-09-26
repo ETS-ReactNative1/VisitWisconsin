@@ -21,4 +21,20 @@
     color: #ffffff;
 }
 
+.homeText {
+    margin: -90vh 0vh 0vh 50vh;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Wendy One';
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;;
+}
 
+.homeText2 {
+    margin: 0vh 0vh 0vh 120vh;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Wendy One';
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;
+}
