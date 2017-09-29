@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Wendy+One|Anton');
+
+
+.homeHeader {
+    @include width-height(100%, 8vh);
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.slider {
+    margin: 0vh 0vh 0vh 0vh;
+}
+
+.navbar-inverse {
+    .navbar-brand {
+        color: #ffffff;
+        font-family: 'Wendy One';
+        font-size: 9vh;
+    }
+}
+
+.homeText {
+    margin: -90vh 0vh 0vh 50vh;
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Anton', serif;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;;
+}
+
+.homeText2 {
+    margin: 0vh 0vh 0vh 120vh;
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Anton', serif;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.discoverButton {
+    @include display-content-items();
+    @include width-height(23vh, 5vh);
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    margin: auto;
+    margin-top: 50vh;
+    font-family: sans-serif;
+    opacity: 0.7;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    } 
+}
+
+.slide {
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+.mainContentContainer {
+    height: 100vh;
+}
+
+.eventsAroundTheState {
+    display: flex;
+    justify-content: center;
+    margin-top: 16vh;
+    font-size: 18vh;
+    box-shadow: 10px 10px 5px #888888;
+    margin-bottom: 4vh;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.eventOne {
+    @include display-content-items();
+    .eventOneImageContainer {
+        @include width-height(50%, 50vh);
+        border-radius: 15px;
+        margin-left: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        .eventOneImage {
+            @include width-height(101vh, 50vh);
+            border-radius: 1vh;
+        }
+    }
+    .eventOneDescription {
+        @include width-height(45%, 35vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 4vh 2vh 4vh 3vh;
+        .eventOneTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 2vh;
+        }
+    }
+}
+
+.eventTwo {
+    @include display-content-items();
+    margin-top: 3vh;
+    .eventTwoImageContainer {
+        @include width-height(50%, 50vh);
+        background-color: black;
+        border-radius: 15px;
+        margin-left: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        .eventTwoImage {
+            @include width-height(101vh, 50vh);
+            border-radius: 1vh;
+        }
+    }
+    .eventTwoDescription {
+        @include width-height(45%, 35vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        padding: 4vh 2vh 4vh 3vh;
+        box-shadow: 10px 10px 5px #888888;
+        .eventTwoTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 2vh;
+        }
+    }
+}
+
+.eventThree {
+    @include display-content-items();
+    margin-top: 3vh;
+    .eventThreeImageContainer {
+        @include width-height(50%, 50vh);
+        background-color: rgba(92, 87, 87, 0.0);
+        border-radius: 15px;
+        margin-left: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        .eventThreeImage {
+            @include width-height(101vh, 50vh);
+            border-radius: 1vh;
+        }
+    }
+    .eventThreeDescription {
+        @include width-height(45%, 33vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        .eventThreeTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 2vh;
+        }
+    }
+}
+
+.footer {
+    @include width-height(100%, 22vh);
+    margin-top: 5vh;
+    background-color: #222222;
+}

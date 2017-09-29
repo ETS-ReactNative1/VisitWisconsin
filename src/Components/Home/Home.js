@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Home/Home.css';
+import '../../styles/home_component/_home.scss';
 import Slider from '../SlideShow/Slider';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -52,7 +52,7 @@ export default class Home extends Component {
                         <Link to='#Events'><strong>Click to Discover More</strong></Link>
                     </div>
                         <div className='eventsAroundTheState'>
-                            <a id='Events'><u>Events</u></a>
+                            <a id='Events'>Events</a>
                         </div>
                     <div className='mainContentContainer'>
 
@@ -126,6 +126,7 @@ export default class Home extends Component {
 
                         </div>
                     </div>
+                    
             </div>
 
         )

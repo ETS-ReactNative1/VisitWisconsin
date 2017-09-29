@@ -1,0 +1,20 @@
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin description-border($border-size: 2px, $border-color: black, $border-style: solid) {
+    border: $border-size $border-color $border-style;
+    border-left: 0px;
+}
+
+@mixin title-border($border-size: 1px, $border-color: black, $border-style: solid) {
+    border: $border-size $border-color $border-style;
+    border-left: 0px;
+}
+
+@mixin display-content-items($display: flex, $justify-content: center, $align-items: center) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
