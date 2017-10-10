@@ -2,11 +2,12 @@
 
 
 .homeHeader {
-    @include width-height(100%, 8vh);
+    width: 100%;
     background-color: #222222;
     display: flex;
     justify-content: center;
     position: fixed;
+    height: 75px;
 }
 
 .slider {

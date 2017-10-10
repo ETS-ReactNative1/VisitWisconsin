@@ -1,0 +1,41 @@
+.headerSpacing {
+    height: 75px;
+}
+
+.mainContent {
+    width: 50%;
+    display: block;
+    display: block;
+    font-size: 8vh;
+    margin: auto;
+    margin-top: 20px;
+    .formContainer {
+        box-shadow: 10px 10px 5px #888888;
+        .firstName {
+           text-align: center;
+        }  
+        .restrauntName {
+            text-align: center;
+            margin-top: .5vh;
+        }
+        .restrauntAddress {
+            text-align: center;
+            margin-top: .5vh;
+        }
+        .rating {
+            text-align: center;
+            margin-top: .5vh;
+        }
+        .submitButton {
+            margin-top: .5vh;
+            margin-left: 37vh;
+            margin-bottom: 1vh;
+        }
+
+    }
+}
+
+
+
+
+

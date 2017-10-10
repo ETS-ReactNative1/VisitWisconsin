@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS major_cities (
+   id SERIAL PRIMARY KEY,
+   city VARCHAR(70)
+)
