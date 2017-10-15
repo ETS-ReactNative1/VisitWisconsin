@@ -3,14 +3,39 @@
 }
 
 .mainContent {
-    width: 50%;
+    width: 48.3%;
     display: block;
     display: block;
     font-size: 8vh;
     margin: auto;
     margin-top: 20px;
+    .culinaryPicContainer {
+        @include display-content-items();
+        .culinaryPic {
+            @include width-height(140%, 90vh);
+            border-radius: 2vh;
+            box-shadow: 10px 10px 5px #888888;
+        }
+    }
+    .submitButton {
+        margin-top: 2vh;
+        margin-left: 37vh;
+        margin-bottom: 1vh;
+        box-shadow: 10px 10px 5px #888888;
+    }
     .formContainer {
         box-shadow: 10px 10px 5px #888888;
+        margin-top: 10px;
+        .whatCity1 {
+            font-size: 25px;
+            margin-left: 150px;
+            margin-top: 10px;
+            width: 35vh;
+            height: 2px;
+        }
+        .whatCity {
+            margin-left: 400px;
+        }
         .firstName {
            text-align: center;
         }  
@@ -26,16 +51,6 @@
             text-align: center;
             margin-top: .5vh;
         }
-        .submitButton {
-            margin-top: .5vh;
-            margin-left: 37vh;
-            margin-bottom: 1vh;
-        }
 
     }
 }
-
-
-
-
-

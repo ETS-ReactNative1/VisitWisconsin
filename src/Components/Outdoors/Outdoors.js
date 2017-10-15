@@ -10,11 +10,6 @@ export default class Outdoors extends Component {
                 <div className='spaceForNavBar'>
     
                 </div>
-
-                <div className='culinaryPicContainer'>
-                    <img className='culinaryPic' src="https://images.pexels.com/photos/407293/pexels-photo-407293.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
-                </div>
-
                 <div className='titleConatiner'>
                 <div className='popularNowTitle'>
                     Popular Now

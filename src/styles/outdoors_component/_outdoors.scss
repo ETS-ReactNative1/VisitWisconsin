@@ -2,16 +2,6 @@
     @include width-height(100%, 8vh);
 }
 
-.culinaryPicContainer {
-    @include display-content-items();
-}
-
-.culinaryPic {
-    @include width-height(75%, 90vh);
-    // border-radius: 2vh;
-    box-shadow: 10px 10px 5px #888888;
-}
-
 .titleContainer {
     @include display-content-items();
     margin: auto;

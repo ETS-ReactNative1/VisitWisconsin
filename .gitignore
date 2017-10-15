@@ -19,3 +19,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+git clone https://github.com/Kedirech/hosting-chat-demo.git
+cd hosting-chat-demo/git
+npm install
+touch server_config.js
+nano server_config.js

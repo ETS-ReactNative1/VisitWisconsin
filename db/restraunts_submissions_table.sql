@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS restraunts_submissions (
     restraunt_name VARCHAR(180),
     restraunt_address TEXT,
     rating INTEGER,
-    city_id INTEGER REFERENCES major_cities(id)
+    city_id INTEGER REFERENCES major_cities(city_id)
 )
