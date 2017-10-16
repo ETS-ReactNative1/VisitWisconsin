@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const SlideFive= (props) => {
     let background = {
-        backgroundImage: 'url(https://cdn.pixabay.com/photo/2014/05/18/19/23/farmhouse-347434_960_720.jpg)',
+        backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/11/08/22/33/madison-1809576_960_720.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
