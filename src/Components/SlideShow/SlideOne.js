@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const SlideOne= (props) => {
     let background = {
-        backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/22/16/44/farm-2431465_960_720.jpg)',
+        backgroundImage: 'url(https://lh3.googleusercontent.com/_5NQ4LJjrtTcA0vxMLUai_lsgzj_c1O_Mu6G7Uz_w8gZm4b3J4T4i1MBPMVW284Kwof2R9NiC_fBnv0=w1920-h887-rw)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
