@@ -8,16 +8,20 @@
     display: block;
     font-size: 8vh;
     margin: auto;
-    margin-top: 20px;
     .culinaryPicContainer {
         @include display-content-items();
+        position: relative;
         .culinaryPic {
-            @include width-height(140%, 90vh);
-            border-radius: 2vh;
+            @include width-height(140%, 50vh);
             box-shadow: 10px 10px 5px #888888;
         }
+        .whiteHeader {
+            @include width-height (100%, 10vh);
+            background-color: #ffffff;
+            position: absolute;
+            margin-top: 250px;
+        }
     }
-
     .text1 {
         text-align: center;
     }

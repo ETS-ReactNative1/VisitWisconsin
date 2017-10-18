@@ -7,20 +7,25 @@
   display: block;
   display: block;
   font-size: 8vh;
-  margin: auto;
-  margin-top: 20px; }
+  margin: auto; }
   .mainContent .culinaryPicContainer {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .mainContent .culinaryPicContainer .culinaryPic {
       width: 140%;
-      height: 90vh;
-      border-radius: 2vh;
+      height: 50vh;
       box-shadow: 10px 10px 5px #888888; }
+    .mainContent .culinaryPicContainer .whiteHeader {
+      width: 100%;
+      height: 10vh;
+      background-color: #ffffff;
+      position: absolute;
+      margin-top: 250px; }
   .mainContent .text1 {
     text-align: center; }
-  .mainContent .submitButton {
+  .mainContent .btnSubmit {
     margin-top: 2vh;
     margin-left: 37vh;
     margin-bottom: 1vh;

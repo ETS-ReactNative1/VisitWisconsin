@@ -94,7 +94,9 @@ export default class Dining extends Component {
 
                 <div className='culinaryPicContainer'>
                     <img className='culinaryPic' src="https://images.pexels.com/photos/407293/pexels-photo-407293.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
+                <div className='whiteHeader'>~ Popular Now ~</div>
                 </div>
+
 
                 <div className='text1'>Not see your favorite restaurant? Add it to our list!</div>
                     <div className='formContainer'>
