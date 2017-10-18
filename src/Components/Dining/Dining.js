@@ -13,8 +13,18 @@ export default class Dining extends Component {
             rating: '',
             city_id: [],
             form: [],
-            category_id: []
+            category_id: [],
+            formData: []
         }
+    }
+
+    componentDidMount() {
+        axios.get('/api/form').then(response => {
+            console.log(response.data);
+            this.setState({
+                formData: response.data
+            })
+        })
     }
 
     updateFirstName(input) {
@@ -83,7 +93,19 @@ export default class Dining extends Component {
     
           
           render() {
-              console.log(this.state);
+              console.log(this.state.formData);
+
+            //    let formData = this.state.formData.map(function(data) {
+            //       return(
+            //           <div>
+            //               <div>
+            //               {data.restaurant_name}
+            //               </div>
+            //         </div>
+            //         ) 
+                    
+            //   })
+              
               return (
             <div>
                 <Navbar/>
@@ -95,6 +117,25 @@ export default class Dining extends Component {
                 <div className='culinaryPicContainer'>
                     <img className='culinaryPic' src="https://images.pexels.com/photos/407293/pexels-photo-407293.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
                 <div className='whiteHeader'>~ Popular Now ~</div>
+                </div>
+
+                <div className='restaurantsContainer'>
+                    <form className='citySearch'>
+                        <select name='cityChoice'>
+                            <option value='1'>Milwaukee</option>
+                            <option value='2'>Madison</option>
+                            <option value='3'>Green Bay</option>
+                            <option value='4'>Kenosha</option>
+                            <option value='5'>Racine</option>
+                            <option value='6'>Appleton</option>
+                            <option value='7'>Waukesha</option>
+                            <option value='8'>Eau Claie</option>
+                            <option value='9'>Oshkosh</option>
+                            <option value='10'>Janesville</option>
+                        </select>
+                    </form>
+
+                    {/* {tableData} */}
                 </div>
 
 

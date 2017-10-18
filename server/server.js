@@ -29,5 +29,17 @@ const express = require ('express'),
         console.log(category);
       })
       
+      app.get('/api/form', (req, res) => {
+          req.app.get('db').get_form(req.body.restaurant_name, req.body.restaurant_address, req.body.rating).then(form => {
+              req.app.get('db').get_city(req.body.city).then(city => {
+                    req.app.get('db').get_category(req.body.category).then(category => {
+                        res.status(200).send({category, city, form});
+                    })
+              })
+            })
+          
+
+      })
+
       const port = 3030;
       app.listen(port, () => console.log('Listening on port: ', port))

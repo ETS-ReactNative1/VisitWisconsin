@@ -3,7 +3,7 @@
 }
 
 .mainContent {
-    width: 48.3%;
+    width: 100%;
     display: block;
     display: block;
     font-size: 8vh;
@@ -12,28 +12,40 @@
         @include display-content-items();
         position: relative;
         .culinaryPic {
-            @include width-height(140%, 50vh);
-            box-shadow: 10px 10px 5px #888888;
+            @include width-height(60%, 70vh);
+            // box-shadow: 10px 10px 5px #888888;
         }
         .whiteHeader {
-            @include width-height (100%, 10vh);
+            width: 45%;
+            border-radius: 20px;
             background-color: #ffffff;
             position: absolute;
-            margin-top: 250px;
+            margin-top: 260px;
+            display: flex;
+            justify-content: center;   
         }
+    }
+    .restaurantsContainer {
+        width: 100%;
+        height: 99vh;
+        border: 2px solid green;
+        margin-top: 10vh;
     }
     .text1 {
         text-align: center;
+        margin-top: 1000px;
     }
     .btnSubmit {
         margin-top: 2vh;
-        margin-left: 37vh;
+        magin-left: 100px;
         margin-bottom: 1vh;
         box-shadow: 10px 10px 5px #888888;
     }
     .formContainer {
         box-shadow: 10px 10px 5px #888888;
         margin-top: 10px;
+        margin:auto; 
+        width:50%;
         .whatCity1 {
             font-size: 25px;
             margin-left: 150px;
