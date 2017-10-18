@@ -16,7 +16,7 @@ const express = require ('express'),
       app.use(cors());
       app.use(bodyParser.json());
       console.log(`${__dirname}/build`);
-      app.use(express.static(`${__dirname}./../../build`))
+      app.use(express.static(`${__dirname}./../build`))
 
       app.post('/api/form', (req, res) => {
         const form = app.get('db')
