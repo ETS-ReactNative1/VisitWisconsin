@@ -11,10 +11,10 @@ export default class Navbar extends Component {
                         </div>
                             
                         <ul className="nav navbar-nav">
-                            <li><a href="http://localhost:3000/#/">Home</a></li>
-                            <li><a href="http://localhost:3000/#/dining">Dining</a></li>
-                            <li><a href="http://localhost:3000/#/outdoors">Outdoors</a></li>
-                            <li><a href="http://localhost:3000/#/explore">Explore</a></li>
+                            <li><a href="/#/">Home</a></li>
+                            <li><a href="/#/dining">Dining</a></li>
+                            <li><a href="/#/outdoors">Outdoors</a></li>
+                            <li><a href="/#/explore">Explore</a></li>
                         </ul>
                             {/*search bar*/}
                         {/* <form className="navbar-form navbar-left">
