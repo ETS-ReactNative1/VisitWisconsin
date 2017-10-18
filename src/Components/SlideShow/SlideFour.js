@@ -2,7 +2,7 @@ import React from 'react';
 
 const SlideFour= (props) => {
     let background = {
-        backgroundImage: 'url(https://cdn.pixabay.com/photo/2015/11/12/00/25/landscapes-1039443_960_720.jpg)',
+        backgroundImage: 'url(https://lh6.googleusercontent.com/gx8qiUc1Ynhzj3pmSbSxcrdRfwxIUrMWQ4bpkhCbjk0g_JAirB6V6vKfOQ7DYywje6Vy-GWRfOvxd7k=w1920-h887-rw)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
