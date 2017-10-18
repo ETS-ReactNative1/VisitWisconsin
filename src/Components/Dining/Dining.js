@@ -8,11 +8,12 @@ export default class Dining extends Component {
         super()
         this.state = {
             first_name: '',
-            restraunt_name: '',
-            restraunt_address: '',
+            restaurant_name: '',
+            restaurant_address: '',
             rating: '',
             city_id: [],
-            form: []
+            form: [],
+            category_id: []
         }
     }
 
@@ -22,15 +23,15 @@ export default class Dining extends Component {
         });
     }
 
-    updateRestrauntName(input) {
+    updateRestaurantName(input) {
         this.setState({
-            restraunt_name: input
+            restaurant_name: input
         });
     }
 
-    updateRestrauntAddress(input) {
+    updateRestaurantAddress(input) {
         this.setState({
-            restraunt_address: input
+            restaurant_address: input
         });
     }
 
@@ -46,21 +47,29 @@ export default class Dining extends Component {
         });
     }
 
+    updateCategory(input) {
+        this.setState({
+            category_id: input
+        });
+    }
+
     submitForm(form) {
         this.setState({
             form: [this.state.first_name,
-            this.state.restraunt_name,
-            this.state.restraunt_address,
+            this.state.restaurant_name,
+            this.state.restaurant_address,
             this.state.rating,
-            this.state.city_id
+            this.state.city_id,
+            this.state.category_id
             ]
         })
         axios.post('http://localhost:3030/api/form', {
             first_name: this.state.first_name,
-            restraunt_name: this.state.restraunt_name,
-            restraunt_address: this.state.restraunt_address,
+            restaurant_name: this.state.restaurant_name,
+            restaurant_address: this.state.restaurant_address,
             rating: this.state.rating,
-            city_id: this.state.city_id[0]
+            city_id: this.state.city_id,
+            category_id: this.state.category_id
         })
 
         .then(function (response) {
@@ -68,7 +77,8 @@ export default class Dining extends Component {
           })
           .catch(function (error) {
             console.log(error)
-          })}
+          }) 
+    }
 
     
           
@@ -86,16 +96,16 @@ export default class Dining extends Component {
                     <img className='culinaryPic' src="https://images.pexels.com/photos/407293/pexels-photo-407293.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
                 </div>
 
-                <div className='text1'>Not see your favorite restraunt? Add it to our list!</div>
+                <div className='text1'>Not see your favorite restaurant? Add it to our list!</div>
                     <div className='formContainer'>
                         <input className='firstName' placeholder='First Name' type='text' onChange={(e) => this.updateFirstName(e.target.value)}/>
-                        <input className='restrauntName' placeholder='Restraunt Name' type='text' onChange={(e) => this.updateRestrauntName(e.target.value)}/>
-                        <input className='restrauntAddress' placeholder='Restraunt Address' type='text' onChange={(e) => this.updateRestrauntAddress(e.target.value)}/>
+                        <input className='restaurantName' placeholder='restaurant Name' type='text' onChange={(e) => this.updateRestaurantName(e.target.value)}/>
+                        <input className='restaurantAddress' placeholder='restaurant Address' type='text' onChange={(e) => this.updateRestaurantAddress(e.target.value)}/>
                         <input className='rating' type='text' placeholder='Rating 1-5' onChange={(e) => this.updateRating(e.target.value)}/><br/>
-                        <div className='whatCity1'>What city is the restraunt in?</div>
+                        <div className='whatCity1'>What city is the restaurant in?</div>
                         <form className='whatCity' onChange={(e) => this.updateCity(e.target.value)} action='/action_page.php'>
                             <select onChange={(e) => this.updateCity(+e.target.value)} name='city'>
-                                <option onClick={()=>{this.setState({city_id: 1})}} value='1'>Milwaukee</option>
+                                <option value='1'>Milwaukee</option>
                                 <option value='2'>Madison</option>
                                 <option value='3'>Green Bay</option>
                                 <option value='4'>Kenosha</option>
@@ -108,10 +118,33 @@ export default class Dining extends Component {
                             </select>
                         </form>
 
-                    </div>
-                        <button className='submitButton' type='submit' value='Submit' onClick={() => this.submitForm()}>Submit</button>
-                </div>
+                        <div className='whatCategory1'>What category is this restaurant?</div>
+                        <form className='whatCategory' onChange={(e) => this.updateCategory(e.target.value)} action='/action_page.php'>
+                            <select onChange={(e) => this.updateCategory(+e.target.value)} name='category'>
+                                <option value='1'>German</option>
+                                <option value='2'>American</option>
+                                <option value='3'>Seafood</option>
+                                <option value='4'>French</option>
+                                <option value='5'>Italian</option>
+                                <option value='6'>Steakhouse</option>
+                                <option value='7'>Bar</option>
+                                <option value='8'>Breakfast</option>
+                                <option value='9'>Pizza</option>
+                                <option value='10'>Indian</option>
+                                <option value='11'>Chinese</option>
+                                <option value='12'>Thai</option>
+                                <option value='13'>Mexican</option>
+                                <option value='14'>Irish</option>
+                                <option value='15'>Mediterranean</option>
+                                <option value='16'>Japanese</option>
+                                <option value='17'>Sushi</option>
+                            </select>
+                        </form>
 
+                    </div>
+                        <input type='button' value='Submit' id='btnSubmit' onClick={() => this.submitForm()}/>
+
+            </div>
             </div>
 
         )

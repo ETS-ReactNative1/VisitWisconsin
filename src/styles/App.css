@@ -18,6 +18,8 @@
       height: 90vh;
       border-radius: 2vh;
       box-shadow: 10px 10px 5px #888888; }
+  .mainContent .text1 {
+    text-align: center; }
   .mainContent .submitButton {
     margin-top: 2vh;
     margin-left: 37vh;
@@ -34,6 +36,14 @@
       height: 2px; }
     .mainContent .formContainer .whatCity {
       margin-left: 400px; }
+    .mainContent .formContainer .whatCategory1 {
+      font-size: 25px;
+      margin-left: 110px;
+      margin-top: 10px;
+      width: 35vh;
+      height: 2px; }
+    .mainContent .formContainer .whatCategory {
+      margin-left: 300px; }
     .mainContent .formContainer .firstName {
       text-align: center; }
     .mainContent .formContainer .restrauntName {

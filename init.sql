@@ -1,0 +1,118 @@
+CREATE TABLE IF NOT EXISTS major_cities (
+   city_id INTEGER PRIMARY KEY,
+   city VARCHAR(70)
+);
+
+CREATE TABLE IF NOT EXISTS categories (
+    category_id INTEGER PRIMARY KEY,
+    category_name VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS restaurant_submissions (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100),
+    restaurant_name VARCHAR(180),
+    restaurant_address TEXT,
+    rating INTEGER,
+    category_id INTEGER REFERENCES categories(category_id),
+    city_id INTEGER REFERENCES major_cities(city_id)
+);
+
+INSERT INTO categories(category_id, category_name)
+VALUES
+(1, 'German'),
+(2, 'American'),
+(3, 'Seafood'),
+(4, 'French'),
+(5, 'Italian'),
+(6, 'Steakhouse'),
+(7, 'Bar'),
+(8, 'Breakfast'),
+(9, 'Pizza'),
+(10, 'Indian'),
+(11, 'Chinese'),
+(12, 'Thai'),
+(13, 'Mexican'),
+(14, 'Irish'),
+(15, 'Mediterranean'),
+(16, 'Japanese'),
+(17, 'Sushi');
+
+INSERT INTO major_cities (city_id, city)
+VALUES (1, 'Milwaukee'),
+(2, 'Madison'),
+(3, 'Green Bay'),
+(4, 'Kenosha'),
+(5, 'Racine'),
+(6, 'Appleton'),
+(7, 'Waukesha'),
+(8, 'Eau Claire'),
+(9, 'Oshkosh'),
+(10, 'Janesville');
+
+INSERT INTO restaurant_submissions (first_name, restaurant_name, restaurant_address, rating, category_id, city_id)
+VALUES
+('Susan', 'Hacienda Real Mexican Restaurant', '3001 N Lexington Dr', 4, 13, 10),
+('Robert', 'Milwaukee Grill Janesville', '2601 Morse St', 4, 2, 10),
+('Allen', 'Fuji Sushi and Steak House', 'Milton Ave', 4, 16, 10),
+('Bob', 'Citrus Cafe', '208 S Main St', 4, 8, 10),
+('Allie', 'Prime Quarter Steak House', '1900 Humes Rd', 4, 7, 10),
+('Russ', 'O Riley & Conways Irish Pub', '214 W Milwaukee St', 4, 7, 10),
+('Ronald', 'Benvenutos Italian Grill', '300 S Koeller St Ste H', 4, 5, 9),
+('Diane', 'Christianos Pizza', '1964 S Koeller St', 4, 9, 9),
+('Chuck', 'Dublins Irish Pub', '2070 W 9th Ave', 4, 7, 9),
+('Lena', 'Beckets', '2 Jackson St', 4, 2, 9),
+('Tammy', 'Durangos Mexican Restaurant', '2070 S Koeller St', 4, 13, 9),
+('Meagan', 'The Brooklyn Grill', '607 S Main St', 4, 2, 9),
+('Sam', 'Ichiban Sushi House', '1600 Capital Dr', 4, 17, 9),
+('Mike', 'Salute Italian Restaurant', '314 Main St', 4, 5, 5),
+('Sydney', 'Reefpoint Brew House', '2 Christopher Colombus Causeway', 4, 7, 5),
+('Mackenzee', 'Javiers Cuisine', '2011 Lathrop Ave', 4, 13, 5),
+('Lindsay', 'Vero International Cuisine', '211 6th St', 4, 2, 5),
+('Kimberly', 'Krung Thai Restaurant & Cocktails', '515 6th St', 4, 12, 5),
+('Justin', 'Blue Bear', '2920 Taylor Ave', 4, 8, 5),
+('Sarah', 'Carmellas an Italian Bistro', '716 N Casaloma Dr', 7, 5, 6),
+('Ava', 'Fratellos Riverfront Restaurant', '501 W Water St', 4, 2, 6),
+('Shannon', 'Apollon', '207 N Appleton St', 4, 1, 6),
+('Nick', 'Marks East Side', '1405 E Wisconsin Ave', 4, 1, 6),
+('Wanda', 'Stone Arch Brewpub', '1004 S Olde Oneida St', 4, 7, 6),
+('John', 'The Red Ox Seafood and Steakhouse', '2318 S Oneida St', 4, 6, 6),
+('Brandon', 'Stucs Pizza', '110 N Douglas St', 4, 9, 6),
+('Jordan', 'La Estacion', '319 Williams St', 4, 13, 7),
+('Josh', 'Golden Gate Restaurant', '1427 E Racine Ave', 4, 11, 7),
+('Brittany', 'Toftes Table', '331 Riverfront Plazza', 4, 2, 7),
+('Sandra', 'Meli', '294 W Main St', 4, 15, 7),
+('Brooklyn', 'Mias', '800 Clinton St', 3, 5, 7),
+('Heather', 'Dady-Ohs Restaurant', '250 W Broadway', 4, 2, 7),
+('Isabelle', 'Erics Porter Haus', '229 Wisconsin Ave', 3, 6, 7),
+('Jacob', 'Johnnys Italian Steakhouse', '4751 Own Ayres Ct', 4, 5, 8),
+('Eric', 'Houligans Steak & Seafood', '415 S Barstow St', 4, 7, 8),
+('Woo', 'The Classic Garage', '2111 3rd St', 4, 2, 8),
+('Vince', 'Stella Blues', '306 E Madison St', 4, 7, 8),
+('Onkar', 'Tacos Juanita Mexican Restaurant', '2823 E Hamilton Ave', 4, 13, 8),
+('Aaron', 'Jade Garden', '3602 Gateway Dr', 4, 11, 8),
+('Daniel', 'Maders Restaurant', '1041 N Old World 3rd St', 4, 1, 1),
+('Todd', 'Mason Street Grill', '425 E Mason Street', 4,2, 1),
+('Annie', 'Blues Egg', '317 N 76th St', 4, 8, 1),
+('Austin', 'Harbor House', '550 N Harbor Dr', 4, 3, 1),
+('Kat', 'Bartolottas Lake Park Bistro', '3133 E Newberry Blvd', 4, 4, 1),
+('Skylar', 'Odd Duck', '2352 S Kinnickinnic Ave', 4, 2, 1),
+('Connor', 'Cento', '122 W Miffin St', 4, 5, 2),
+('Brianna', 'The Old Fashioned', '23 N Pinckney St', 4, 2, 2),
+('Jeff', 'Johnny Delmonicos Steakhouse', '130 S Pinckney St', 4, 6, 2),
+('Bryce', 'Stort Stack Eatery', '301 W Johnson St', 4, 8, 2),
+('Sue', 'Salvatores Tomato Pies', '121 E Main St', 4, 9, 2),
+('Bryan', 'Swagat Indian Restaurant', '707 N High Point Rd', 4, 10, 2),
+('Scarlet', 'Takumi', '4222 E Towne Blvd', 4, 16, 2),
+('Steve', 'Angelina Restaurant', '117 N Adams St', 4, 5, 3),
+('Alice', '1951 West Cocktails', '1951 Bond St', 4, 5, 3),
+('Erin', 'HOF Chophouse', '1004 Brett Favre Pass', 3, 6, 3),
+('Hannah', 'Mayflower Restaurant Inc', '415 S Military Ave', 4, 11, 3),
+('Brett', 'El Sarape East', '2030 East Mason Street Suite H1', 4, 13, 3),
+('Christina', 'Lorelei Inn', '1412 Webster Ave', 4, 1, 3),
+('Madison', 'Bangkok Garden Restaurant', '240 N Broadway', 4, 12, 3),
+('George', 'Kaisers Pizza & Pub', '510 57th St', 4, 9, 4),
+('Juan', 'Franks Diner', '508 58th St', 4, 2, 4),
+('Delores', 'Ashling On the Lough', '125 56th St', 4, 14, 4),
+('Kaden', 'La Fogata Mexican Grill', '3300 Sheridan Rd', 4, 13, 4),
+('Marie', 'Boat House Pub & Eatery', '4917 7th Ave', 3, 7, 4);

@@ -20,11 +20,13 @@ const express = require ('express'),
 
       app.post('/api/form', (req, res) => {
         const form = app.get('db')
-        let city = parseInt(req.body.city_id);    
-        req.app.get('db').create_restraunts([req.body.first_name, req.body.restraunt_name, req.body.restraunt_address, req.body.rating, req.body.city_id]).then(submission => {
+        let city = parseInt(req.body.city_id);
+        let category = parseInt(req.body.category_id);    
+        req.app.get('db').create_restaurants([req.body.first_name, req.body.restaurant_name, req.body.restaurant_address, req.body.rating, req.body.city_id, req.body.category_id]).then(submission => {
             res.send()
         })
         console.log(city);
+        console.log(category);
       })
       
       const port = 3030;
