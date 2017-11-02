@@ -14,17 +14,9 @@ export default class Dining extends Component {
             city_id: [],
             form: [],
             category_id: [],
-            formData: []
+            formData: [],
+            filterCityId: 0
         }
-    }
-
-    componentDidMount() {
-        axios.get('/api/form').then(response => {
-            console.log(response.data);
-            this.setState({
-                formData: response.data
-            })
-        })
     }
 
     updateFirstName(input) {
@@ -55,6 +47,26 @@ export default class Dining extends Component {
         this.setState({
             city_id: input
         });
+    }
+
+    updateFilterCityId(input) {
+        this.setState({
+            filterCityId: input
+        });
+        axios.get('/api/form/' + this.state.filterCityId).then(response => {
+            console.log(response.data);
+            this.setState({
+                formData: response.data
+            })
+        })
+    } 
+
+    deleteSubmission(sub) {
+        axios.delete(`/api/form/${sub}`).then((response) => {
+            this.setState({
+                formData: response.data
+            })
+        })
     }
 
     updateCategory(input) {
@@ -93,18 +105,23 @@ export default class Dining extends Component {
     
           
           render() {
-              console.log(this.state.formData);
-
-            //    let formData = this.state.formData.map(function(data) {
-            //       return(
-            //           <div>
-            //               <div>
-            //               {data.restaurant_name}
-            //               </div>
-            //         </div>
-            //         ) 
+              console.log(this.state);
+               let formData = this.state.formData.map((data) => {
+                  return(
+                      <div>
+                          <div className='formDataContainer'>
+                            {data.restaurant_name}
+                            {data.restaurant_address}
+                            {data.rating}
+                            {data.category_id}  
+                            <button style={{cursor: 'pointer'}} className='deleteButton' onClick={() => this.deleteSubmission(data.id)}>X</button>
+                        </div>
+                    </div>
+                    ) 
                     
-            //   })
+              })
+            
+            
               
               return (
             <div>
@@ -121,7 +138,7 @@ export default class Dining extends Component {
 
                 <div className='restaurantsContainer'>
                     <form className='citySearch'>
-                        <select name='cityChoice'>
+                        <select onChange={(e) => this.updateFilterCityId(+e.target.value)} name='cityChoice'>
                             <option value='1'>Milwaukee</option>
                             <option value='2'>Madison</option>
                             <option value='3'>Green Bay</option>
@@ -135,7 +152,10 @@ export default class Dining extends Component {
                         </select>
                     </form>
 
-                    {/* {tableData} */}
+                    <div className='formDataContainer'>
+                    {formData}
+                    </div>
+                    
                 </div>
 
 

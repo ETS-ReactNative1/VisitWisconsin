@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const SlideThree= (props) => {
     let background = {
-        backgroundImage: 'url(https://lh6.googleusercontent.com/umcONr3D0v5hQnQ39hxu0POlKmg24GIaZySJcE4je5ZCuipPW1frFD7Ve5nmXYrc9WLT1UkKaNJSYPw=w1920-h887-rw)',
+        backgroundImage: 'url(https://lh4.googleusercontent.com/cto8ZovF2x3fpdw0X1h01c_nYcek0Ygf8pmTtl0x3z_gq8n6T0quIAp0qMwhDcxG_IHKxK5rA10LLng=w1920-h947-rw)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
