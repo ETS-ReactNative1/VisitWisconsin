@@ -83,10 +83,12 @@
 .slider {
   margin: 0vh 0vh 0vh 0vh; }
 
-.navbar-inverse .navbar-brand {
-  color: #ffffff;
-  font-family: 'Wendy One';
-  font-size: 9vh; }
+.navbar-inverse {
+  width: 100%; }
+  .navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-family: 'Wendy One';
+    font-size: 9vh; }
 
 .homeText {
   margin: -90vh 0vh 0vh 50vh;
@@ -156,7 +158,8 @@
     .eventOne .eventOneImageContainer .eventOneImage {
       width: 101vh;
       height: 50vh;
-      border-radius: 1vh; }
+      border-radius: 1vh;
+      overflow: hidden; }
   .eventOne .eventOneDescription {
     width: 45%;
     height: 35vh;
@@ -166,7 +169,8 @@
     display: flex;
     align-items: center;
     box-shadow: 10px 10px 5px #888888;
-    padding: 4vh 2vh 4vh 3vh; }
+    padding: 4vh 2vh 4vh 3vh;
+    overflow: scroll; }
     .eventOne .eventOneDescription .eventOneTitle {
       border: 1px black solid;
       border-left: 0px;
@@ -194,7 +198,8 @@
     .eventTwo .eventTwoImageContainer .eventTwoImage {
       width: 101vh;
       height: 50vh;
-      border-radius: 1vh; }
+      border-radius: 1vh;
+      overflow: hidden; }
   .eventTwo .eventTwoDescription {
     width: 45%;
     height: 35vh;
@@ -204,7 +209,8 @@
     display: flex;
     align-items: center;
     padding: 4vh 2vh 4vh 3vh;
-    box-shadow: 10px 10px 5px #888888; }
+    box-shadow: 10px 10px 5px #888888;
+    overflow: scroll; }
     .eventTwo .eventTwoDescription .eventTwoTitle {
       border: 1px black solid;
       border-left: 0px;
@@ -232,7 +238,8 @@
     .eventThree .eventThreeImageContainer .eventThreeImage {
       width: 101vh;
       height: 50vh;
-      border-radius: 1vh; }
+      border-radius: 1vh;
+      overflow: hidden; }
   .eventThree .eventThreeDescription {
     width: 45%;
     height: 33vh;
@@ -242,7 +249,8 @@
     display: flex;
     align-items: center;
     box-shadow: 10px 10px 5px #888888;
-    padding: 2px; }
+    padding: 2px;
+    overflow: scroll; }
     .eventThree .eventThreeDescription .eventThreeTitle {
       border: 1px black solid;
       border-left: 0px;
@@ -257,6 +265,137 @@
   height: 22vh;
   margin-top: 5vh;
   background-color: #222222; }
+
+@media (max-width: 1118px) {
+  .navbar {
+    width: 900px;
+    margin: auto; }
+  .homeComponent .slideShowContainer .homeText {
+    font-size: 45px;
+    margin: -85vh 0vh 0vh 35vh; }
+  .homeComponent .slideShowContainer .homeText2 {
+    font-size: 45px;
+    margin: 0vh 0vh 0vh 80vh; } }
+
+@media (max-width: 796px) {
+  .navbar {
+    width: 700px;
+    margin: auto; }
+  .homeHeader .navbar-inverse .container-fluid .navbar-header .navbar-brand {
+    font-size: 5vh; } }
+
+@media (max-width: 796px) {
+  .homeComponent .slideShowContainer .homeText {
+    font-size: 40px;
+    margin: -80vh 0vh 0vh 20vh; }
+  .homeComponent .slideShowContainer .homeText2 {
+    font-size: 40px;
+    margin: 0vh 0vh 0vh 60vh; } }
+
+@media (max-width: 320px) {
+  .homeComponent .eventsAroundTheState {
+    font-size: 50px; }
+  .homeComponent .slideShowContainer {
+    width: 100%; }
+    .homeComponent .slideShowContainer .homeText {
+      font-size: 25px;
+      margin: -80vh 0vh 0vh 4vh; }
+    .homeComponent .slideShowContainer .homeText2 {
+      font-size: 25px;
+      margin: 0vh 0vh 0vh 30vh; }
+  .homeComponent .eventOne {
+    margin-top: 17vh; }
+    .homeComponent .eventOne .eventOneImageContainer {
+      width: 40%;
+      height: 160px; }
+      .homeComponent .eventOne .eventOneImageContainer .eventOneImage {
+        width: 40vh;
+        height: 160px;
+        border-radius: 1vh;
+        overflow: hidden; }
+    .homeComponent .eventOne .eventOneDescription {
+      width: 50%;
+      height: 25vh;
+      border: 2px black solid;
+      border-left: 0px;
+      margin-left: 3vh;
+      display: flex;
+      align-items: center;
+      box-shadow: 10px 10px 5px #888888;
+      padding: 2px;
+      overflow: scroll;
+      font-size: 10px; }
+      .homeComponent .eventOne .eventOneDescription .eventOneTitle {
+        border: 1px black solid;
+        border-left: 0px;
+        margin-right: 3vh;
+        margin-left: 1vh;
+        text-align: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 1vh;
+        font-size: 10px; }
+  .homeComponent .eventTwo {
+    margin-top: 17vh; }
+    .homeComponent .eventTwo .eventTwoImageContainer {
+      width: 40%;
+      height: 160px; }
+      .homeComponent .eventTwo .eventTwoImageContainer .eventTwoImage {
+        width: 40vh;
+        height: 160px;
+        border-radius: 1vh;
+        overflow: hidden; }
+    .homeComponent .eventTwo .eventTwoDescription {
+      width: 50%;
+      height: 25vh;
+      border: 2px black solid;
+      border-left: 0px;
+      margin-left: 3vh;
+      display: flex;
+      align-items: center;
+      box-shadow: 10px 10px 5px #888888;
+      padding: 2px;
+      overflow: scroll;
+      font-size: 10px; }
+      .homeComponent .eventTwo .eventTwoDescription .eventTwoTitle {
+        border: 1px black solid;
+        border-left: 0px;
+        margin-right: 3vh;
+        margin-left: 1vh;
+        text-align: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 1vh;
+        font-size: 10px; }
+  .homeComponent .eventThree {
+    margin-top: 17vh; }
+    .homeComponent .eventThree .eventThreeImageContainer {
+      width: 40%;
+      height: 20vh; }
+      .homeComponent .eventThree .eventThreeImageContainer .eventThreeImage {
+        width: 40vh;
+        height: 20vh;
+        border-radius: 1vh;
+        overflow: hidden; }
+    .homeComponent .eventThree .eventThreeDescription {
+      width: 50%;
+      height: 25vh;
+      border: 2px black solid;
+      border-left: 0px;
+      margin-left: 3vh;
+      display: flex;
+      align-items: center;
+      box-shadow: 10px 10px 5px #888888;
+      padding: 2px;
+      overflow: scroll;
+      font-size: 10px; }
+      .homeComponent .eventThree .eventThreeDescription .eventThreeTitle {
+        border: 1px black solid;
+        border-left: 0px;
+        margin-right: 3vh;
+        margin-left: 1vh;
+        text-align: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 1vh;
+        font-size: 10px; } }
 
 .spaceForNavBar {
   width: 100%;

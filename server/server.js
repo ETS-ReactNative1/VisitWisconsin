@@ -31,13 +31,24 @@ const express = require ('express'),
       
       app.get('/api/form/:city_id', (req, res) => {
           req.app.get('db').get_data(req.params.city_id).then(restaurant_data => {
-              res.status(200).send(restaurant_data);
+            // console.log(restaurant_data);  
+            res.status(200).send(restaurant_data);
           } ) //only this because I chose city_id in the url above
 
-        app.delete('/api/form/:id', (req, res) => {
+        app.delete('/api/form/:id/:city_id', (req, res) => {
+            // console.log(req.params.id);
             req.app.get('db').delete_restaurant_submission([req.params.id]).then(submissions => {
-                req.app.get('db').get_data().then(submissions => {
-                    res.status(200).send(vids);
+                req.app.get('db').get_data(req.params.city_id).then(submissions => {
+                    res.status(200).send(submissions);
+                })
+            })
+        })
+
+        app.put('/api/form/:id/:city_id', (req, res) => {
+            console.log(req.body.rating);
+            req.app.get('db').edit_data([req.params.id, req.body.rating]).then(submissions => {
+                req.app.get('db').get_data(req.params.city_id).then(submissions => {
+                    res.send(submissions);
                 })
             })
         })

@@ -25,7 +25,7 @@ export default class Home extends Component {
                     </div>
 
                     <div className='discoverButton'>
-                        <Link to='#Events'><strong>Click to Discover More</strong></Link>
+                        <Link to='#Events'>Click to Discover More</Link>
                     </div>
                         <div className='eventsAroundTheState'>
                             <a id='Events'>Events</a>

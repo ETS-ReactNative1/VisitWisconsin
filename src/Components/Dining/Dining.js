@@ -15,7 +15,8 @@ export default class Dining extends Component {
             form: [],
             category_id: [],
             formData: [],
-            filterCityId: 0
+            filterCityId: 0,
+            editRating: ''
         }
     }
 
@@ -53,8 +54,8 @@ export default class Dining extends Component {
         this.setState({
             filterCityId: input
         });
-        axios.get('/api/form/' + this.state.filterCityId).then(response => {
-            console.log(response.data);
+        axios.get('/api/form/' + input).then(response => {
+            // console.log(response.data);
             this.setState({
                 formData: response.data
             })
@@ -62,10 +63,17 @@ export default class Dining extends Component {
     } 
 
     deleteSubmission(sub) {
-        axios.delete(`/api/form/${sub}`).then((response) => {
+        console.log(sub);
+        axios.delete(`/api/form/${sub}/${this.state.filterCityId}`).then((response) => {
             this.setState({
                 formData: response.data
             })
+        })
+    }
+
+    editRating(input) {
+        this.setState({
+            editRating: input
         })
     }
 
@@ -73,6 +81,16 @@ export default class Dining extends Component {
         this.setState({
             category_id: input
         });
+    }
+
+    submitEdit(input) {
+
+        axios.put(`/api/form/${input}/${this.state.filterCityId}`, {rating: this.state.editRating}).then((response) => {
+            this.setState({
+                formData: response.data
+            })
+            console.log(response);
+        })
     }
 
     submitForm(form) {
@@ -105,8 +123,9 @@ export default class Dining extends Component {
     
           
           render() {
-              console.log(this.state);
+            //   console.log(this.state);
                let formData = this.state.formData.map((data) => {
+                   console.log(data.id);
                   return(
                       <div>
                           <div className='formDataContainer'>
@@ -115,6 +134,8 @@ export default class Dining extends Component {
                             {data.rating}
                             {data.category_id}  
                             <button style={{cursor: 'pointer'}} className='deleteButton' onClick={() => this.deleteSubmission(data.id)}>X</button>
+                            <input type='text' onChange={(e) => this.editRating(e.target.value)}/>
+                            <button style={{cursor: 'pointer'}} className='editSubmitButton' onClick={() => this.submitEdit(data.id)}>Submit</button>
                         </div>
                     </div>
                     ) 
