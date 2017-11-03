@@ -129,13 +129,25 @@ export default class Dining extends Component {
                   return(
                       <div>
                           <div className='formDataContainer'>
-                            {data.restaurant_name}
-                            {data.restaurant_address}
-                            {data.rating}
-                            {data.category_id}  
-                            <button style={{cursor: 'pointer'}} className='deleteButton' onClick={() => this.deleteSubmission(data.id)}>X</button>
-                            <input type='text' onChange={(e) => this.editRating(e.target.value)}/>
-                            <button style={{cursor: 'pointer'}} className='editSubmitButton' onClick={() => this.submitEdit(data.id)}>Submit</button>
+                            <table className='dataTable'>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Rating</th>
+                                    <th>Category</th>
+                                </tr>
+                                <tr>
+                                    <td>{data.restaurant_name}</td>
+                                    <td>{data.restaurant_address}</td>
+                                    <td>{data.rating}</td>
+                                    <td>{data.category_id}</td>
+                                </tr>
+                            </table>
+                            <div className='editDeleteContainer'>
+                                <input type='text' className='editInput' placeholder='Edit Rating' onChange={(e) => this.editRating(e.target.value)}/>
+                                <button style={{cursor: 'pointer'}} className='editSubmitButton' onClick={() => this.submitEdit(data.id)}>Submit</button>
+                                <button style={{cursor: 'pointer'}} className='deleteButton' onClick={() => this.deleteSubmission(data.id)}>Delete</button>
+                            </div>
                         </div>
                     </div>
                     ) 
@@ -167,7 +179,7 @@ export default class Dining extends Component {
                             <option value='5'>Racine</option>
                             <option value='6'>Appleton</option>
                             <option value='7'>Waukesha</option>
-                            <option value='8'>Eau Claie</option>
+                            <option value='8'>Eau Claire</option>
                             <option value='9'>Oshkosh</option>
                             <option value='10'>Janesville</option>
                         </select>
@@ -183,8 +195,8 @@ export default class Dining extends Component {
                 <div className='text1'>Not see your favorite restaurant? Add it to our list!</div>
                     <div className='formContainer'>
                         <input className='firstName' placeholder='First Name' type='text' onChange={(e) => this.updateFirstName(e.target.value)}/>
-                        <input className='restaurantName' placeholder='restaurant Name' type='text' onChange={(e) => this.updateRestaurantName(e.target.value)}/>
-                        <input className='restaurantAddress' placeholder='restaurant Address' type='text' onChange={(e) => this.updateRestaurantAddress(e.target.value)}/>
+                        <input className='restaurantName' placeholder='Restaurant Name' type='text' onChange={(e) => this.updateRestaurantName(e.target.value)}/>
+                        <input className='restaurantAddress' placeholder='Restaurant Address' type='text' onChange={(e) => this.updateRestaurantAddress(e.target.value)}/>
                         <input className='rating' type='text' placeholder='Rating 1-5' onChange={(e) => this.updateRating(e.target.value)}/><br/>
                         <div className='whatCity1'>What city is the restaurant in?</div>
                         <form className='whatCity' onChange={(e) => this.updateCity(e.target.value)} action='/action_page.php'>
@@ -196,7 +208,7 @@ export default class Dining extends Component {
                                 <option value='5'>Racine</option>
                                 <option value='6'>Appleton</option>
                                 <option value='7'>Waukesha</option>
-                                <option value='8'>Eau Claie</option>
+                                <option value='8'>Eau Claire</option>
                                 <option value='9'>Oshkosh</option>
                                 <option value='10'>Janesville</option>
                             </select>
@@ -226,7 +238,9 @@ export default class Dining extends Component {
                         </form>
 
                     </div>
-                        <input type='button' value='Submit' id='btnSubmit' onClick={() => this.submitForm()}/>
+                    <div className='submitContainer'>
+                        <input type='button' value='Submit' className='btnSubmit' onClick={() => this.submitForm()}/>
+                    </div>
 
             </div>
             </div>

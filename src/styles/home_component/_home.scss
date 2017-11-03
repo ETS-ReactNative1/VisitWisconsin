@@ -375,3 +375,354 @@
         }
     }
  }
+
+ @media (max-width: 604px) {
+    .homeComponent{
+        .eventsAroundTheState {
+            font-size: 40px;
+        }
+       .slideShowContainer {
+           width: 100%;
+           .discoverButton {
+               
+           }
+           .homeText {
+               font-size: 35px;
+               margin: -80vh 0vh 0vh 5vh;
+           }
+           .homeText2 {
+               font-size: 35px;
+               margin: 0vh 0vh 0vh 40vh;
+           }
+        }
+    }
+
+    .eventOneDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventOneTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 14px;
+        }
+    }
+
+    .eventTwoDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventTwoTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 14px;
+        }
+    }
+
+    .eventThreeDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventThreeTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 14px;
+        }
+    }
+
+    .eventOne {
+        .eventOneImageContainer {
+            @include width-height(40%, 20vh);
+            .eventOneImage {
+                @include width-height(40vh, 25vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .eventTwo {
+        .eventTwoImageContainer {
+            @include width-height(40%, 20vh);
+            .eventTwoImage {
+                @include width-height(40vh, 25vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+    .eventThree {
+        .eventThreeImageContainer {
+            @include width-height(40%, 20vh);
+            .eventThreeImage {
+                @include width-height(40vh, 25vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+ }
+
+ @media (max-width: 444px) {
+    .homeComponent{
+        .eventsAroundTheState {
+            font-size: 35px;
+        }
+       .slideShowContainer {
+           width: 100%;
+           .discoverButton {
+               
+           }
+           .homeText {
+               font-size: 25px;
+               margin: -80vh 0vh 0vh 5vh;
+           }
+           .homeText2 {
+               font-size: 25px;
+               margin: 0vh 0vh 0vh 30vh;
+           }
+        }
+    }
+
+    .eventOneDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventOneTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventTwoDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventTwoTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventThreeDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventThreeTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventOne {
+        .eventOneImageContainer {
+            @include width-height(30%, 20vh);
+            .eventOneImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .eventTwo {
+        .eventTwoImageContainer {
+            @include width-height(30%, 20vh);
+            .eventTwoImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+    .eventThree {
+        .eventThreeImageContainer {
+            @include width-height(30%, 20vh);
+            .eventThreeImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+ }
+
+ @media (max-width: 328px) {
+    .homeComponent{
+        .eventsAroundTheState {
+            font-size: 35px;
+        }
+       .slideShowContainer {
+           width: 100%;
+           .discoverButton {
+               font-size: 10px;
+           }
+           .homeText {
+               font-size: 18px;
+               margin: -80vh 0vh 0vh 1vh;
+           }
+           .homeText2 {
+               font-size: 18px;
+               margin: 0vh 0vh 0vh 16vh;
+           }
+        }
+    }
+
+    .eventOneDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventOneTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventTwoDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventTwoTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventThreeDescription {
+        @include width-height(50%, 25vh);
+        @include description-border();
+        margin-left: 3vh;
+        display: flex;
+        align-items: center;
+        box-shadow: 10px 10px 5px #888888;
+        padding: 2px;
+        overflow: scroll;
+        font-size: 10px;
+        .eventThreeTitle {
+            @include title-border();
+            margin-right: 3vh;
+            margin-left: 1vh;
+            text-align: center;
+            box-shadow: 10px 10px 5px #888888;
+            padding: 1vh;
+            font-size: 11px;
+        }
+    }
+
+    .eventOne {
+        .eventOneImageContainer {
+            @include width-height(30%, 20vh);
+            .eventOneImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .eventTwo {
+        .eventTwoImageContainer {
+            @include width-height(30%, 20vh);
+            .eventTwoImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+    .eventThree {
+        .eventThreeImageContainer {
+            @include width-height(30%, 20vh);
+            .eventThreeImage {
+                @include width-height(30vh, 20vh);
+                border-radius: 1vh;
+                overflow: hidden;
+            }
+        }
+    }
+ }

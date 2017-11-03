@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const SlideFive= (props) => {
     let background = {
-        backgroundImage: 'url(https://lh6.googleusercontent.com/zMum6BuDGuY6pRhEF_nn2o4r5xFqtufpmTkVcYc2a3tt2bl2UZolNydl1O-EjOqznZkHawlbiOYtM2k=w1920-h947-rw)',
+        backgroundImage: 'url(https://lh5.googleusercontent.com/rBqdoVoCuTEt_o-AUQw7bWsN0eX4NjPhgnlu62zA4bVo5-LctoZki_hYfiMCTgd6PDodWr6cy_EqJXY=w1920-h947-rw)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
