@@ -15,21 +15,7 @@ export default class Slider extends Component {
       intervalId: ''
     }
       this.moveSlide = this.moveSlide.bind(this);
-    // this.nextSlide = this.nextSlide.bind(this);
-    // this.previousSlide = this.previousSlide.bind(this);
   }
-
-  // nextSlide() {
-  //   this.setState({
-  //     slideCount: this.state.slideCount + 1
-  //   })
-  // }
-
-  // previousSlide() {
-  //   this.setState({
-  //     slideCount: this.state.slideCount - 1
-  //   })
-  // }
 
   moveSlide() {
     if(this.state.slideCount + 1 > 5) {

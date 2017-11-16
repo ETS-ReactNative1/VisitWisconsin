@@ -99,8 +99,12 @@ export default class Home extends Component {
                         </div>
 
                         <div className='footer'>
-
-                        </div>
+                        <a href='#'>Contact</a>&nbsp;
+                        <a href='#'>|</a>&nbsp;
+                        <a href='#'>Privacy & Terms</a>&nbsp;
+                        <a href='#'>|</a>&nbsp;
+                        <a href='#'>Send feedback</a>
+                    </div>
                     </div>
                     
             </div>

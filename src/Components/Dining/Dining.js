@@ -131,16 +131,15 @@ export default class Dining extends Component {
                           <div className='formDataContainer'>
                             <table className='dataTable'>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Rating</th>
-                                    <th>Category</th>
+
                                 </tr>
                                 <tr>
-                                    <td>{data.restaurant_name}</td>
-                                    <td>{data.restaurant_address}</td>
-                                    <td>{data.rating}</td>
+                                    <div className='dataInfo1'>
+                                    <td>{data.restaurant_name} | </td>
+                                    <td>{data.restaurant_address}&nbsp;| </td>
+                                    <td>{data.rating} | </td>
                                     <td>{data.category_id}</td>
+                                    </div>
                                 </tr>
                             </table>
                             <div className='editDeleteContainer'>
@@ -166,7 +165,7 @@ export default class Dining extends Component {
 
                 <div className='culinaryPicContainer'>
                     <img className='culinaryPic' src="https://images.pexels.com/photos/407293/pexels-photo-407293.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
-                <div className='whiteHeader'>~ Popular Now ~</div>
+                <div className='whiteHeader'><div>~ Popular Now ~</div></div>
                 </div>
 
                 <div className='restaurantsContainer'>
@@ -184,6 +183,12 @@ export default class Dining extends Component {
                             <option value='10'>Janesville</option>
                         </select>
                     </form>
+                    <div className='labelContainer'>
+                    <div className='name'>Name |</div>&nbsp;&nbsp;
+                    <div className='address'>Address |</div>&nbsp;&nbsp;
+                    <div className='rating'>Rating |</div>&nbsp;&nbsp;
+                    <div className='category'>Category</div>
+                    </div>
 
                     <div className='formDataContainer'>
                     {formData}
@@ -192,13 +197,13 @@ export default class Dining extends Component {
                 </div>
 
 
-                <div className='text1'>Not see your favorite restaurant? Add it to our list!</div>
                     <div className='formContainer'>
+                        <div className='text1'>Not see your favorite restaurant? Add it to our list!</div>
                         <input className='firstName' placeholder='First Name' type='text' onChange={(e) => this.updateFirstName(e.target.value)}/>
                         <input className='restaurantName' placeholder='Restaurant Name' type='text' onChange={(e) => this.updateRestaurantName(e.target.value)}/>
                         <input className='restaurantAddress' placeholder='Restaurant Address' type='text' onChange={(e) => this.updateRestaurantAddress(e.target.value)}/>
                         <input className='rating' type='text' placeholder='Rating 1-5' onChange={(e) => this.updateRating(e.target.value)}/><br/>
-                        <div className='whatCity1'>What city is the restaurant in?</div>
+                        <div className='whatCity1'>What city is the restaurant in?
                         <form className='whatCity' onChange={(e) => this.updateCity(e.target.value)} action='/action_page.php'>
                             <select onChange={(e) => this.updateCity(+e.target.value)} name='city'>
                                 <option value='1'>Milwaukee</option>
@@ -213,8 +218,9 @@ export default class Dining extends Component {
                                 <option value='10'>Janesville</option>
                             </select>
                         </form>
+                        </div>
 
-                        <div className='whatCategory1'>What category is this restaurant?</div>
+                        <div className='whatCategory1'>What category is this restaurant?
                         <form className='whatCategory' onChange={(e) => this.updateCategory(e.target.value)} action='/action_page.php'>
                             <select onChange={(e) => this.updateCategory(+e.target.value)} name='category'>
                                 <option value='1'>German</option>
@@ -236,12 +242,21 @@ export default class Dining extends Component {
                                 <option value='17'>Sushi</option>
                             </select>
                         </form>
+                        </div>
 
                     </div>
                     <div className='submitContainer'>
                         <input type='button' value='Submit' className='btnSubmit' onClick={() => this.submitForm()}/>
                     </div>
 
+            </div>
+
+            <div className='footer'>
+                <a href='#'>Contact</a>&nbsp;
+                <a href='#'>|</a>&nbsp;
+                <a href='#'>Privacy & Terms</a>&nbsp;
+                <a href='#'>|</a>&nbsp;
+                <a href='#'>Send feedback</a>
             </div>
             </div>
 

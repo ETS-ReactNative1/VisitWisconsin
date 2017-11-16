@@ -18,6 +18,15 @@
         tr:nth-child(even) {
             background-color: #dddddd; 
         }
+        .dataInfo1 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-left: 20px;
+            align-items: center;
+            align-content: stretch;
+        }
     }
 
 }
@@ -32,31 +41,63 @@
     margin: auto;
     .culinaryPicContainer {
         @include display-content-items();
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+        // position: relative;
         .culinaryPic {
-            @include width-height(60%, 70vh);
+            @include width-height(100%, 70vh);
         }
         .whiteHeader {
             width: 45%;
             border-radius: 20px;
             background-color: #ffffff;
-            position: absolute;
-            margin-top: 270px;
             display: flex;
             justify-content: center;   
+            align-content: flex-end;
+            align-items: flex-end;
         }
     }
     .restaurantsContainer {
         width: 100%;
         height: 100vh;
-        border: 2px solid black;
         margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
         .formDataContainer {
-            font-size: 30px;
+            padding: 10px;
+            height: auto;
+            font-size: 20px;
         }
-        .citySearch {
-            margin-left: 590px;
+        .labelContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            align-content: center;
+            margin-bottom: 50px;
+            .name {
+                font-size: 30px;
+            }
+            .address {
+                font-size: 30px;
+            }
+            .rating {
+                font-size: 30px;
+            }
+            .category {
+                font-size: 30px;
+            }
         }
+
     }
     .text1 {
         text-align: center;
@@ -73,29 +114,40 @@
     }
     .formContainer {
         box-shadow: 10px 10px 5px #888888;
-        margin-top: 10px;
+        margin-top: 50px;
         margin:auto; 
         width:50%;
-        .whatCity1 {
-            font-size: 25px;
-            margin-left: 150px;
-            margin-top: 10px;
-            width: 35vh;
-            height: 2px;
-        }
-        .whatCity {
-            margin-left: 400px;
-        }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
         .whatCategory1 {
-            font-size: 25px;
-            margin-left: 110px;
-            margin-top: 10px;
-            width: 35vh;
-            height: 2px;
+
         }
-        .whatCategory {
-            margin-left: 300px;
-        }
+        // .whatCity1 {
+        //     font-size: 25px;
+        //     margin-left: 50px;
+        //     margin-top: 10px;
+        //     width: 35vh;
+        //     height: 2px;
+        // }
+        // .whatCity {
+        //     margin-left: 550px;
+        //     margin-top: -50px;
+        // }
+        // .whatCategory1 {
+        //     font-size: 25px;
+        //     margin-left: 50px;
+        //     margin-top: 10px;
+        //     width: 35vh;
+        //     height: 2px;
+        // }
+        // .whatCategory {
+        //     margin-left: 415px;
+        //     margin-top: -10px;
+        // }
         .firstName {
            text-align: center;
         }  
@@ -115,3 +167,6 @@
     }
 
 }
+
+
+
