@@ -14,7 +14,7 @@ export default class Outdoors extends Component {
                     <img className='outdoorPic' src='https://www.tnvacation.com/sites/default/files/styles/hero/public/article/Nature%26Outdoors_CustomContent_HeroPhoto.jpg'/>
                 </div>
                 <div className='topTenContainer'>
-                    Top 10 Outdoor Activies
+                    Top 10 Outdoor Activities
                     <div className='activity'>
                         <div className='containerOne'>
                             <img className='activityPhoto' src='https://media-cdn.tripadvisor.com/media/photo-f/05/ac/9e/b5/bigfoot-zipline.jpg'/>
