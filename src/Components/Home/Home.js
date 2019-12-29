@@ -34,7 +34,7 @@ export default class Home extends Component {
 
                         <div className='eventOne'>
                             <div className='eventOneImageContainer'>
-                                <img className='eventOneImage' src='http://vannoppen.co/static/media/uploads/airventure-oshkosh-2015/air_show_p51_field_lr.jpg'/>
+                                <img className='eventOneImage' src='https://hanshowe.files.wordpress.com/2019/07/airplanes-arrive-at-oskosh-airshow-2019-all-of-them-at-once-hal-davis.jpg?w=468&h=263'/>
                             </div>
 
                             <div className='eventOneDescription'>
